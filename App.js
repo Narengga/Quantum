@@ -10,10 +10,13 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableHighlight
 } from 'react-native';
+import Title from "./src/Title";
+import Card from './src/Card';
+import CardBottom from './src/CardBottom';
 
-import Login from './src/Login';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -24,17 +27,42 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={ styles.isyana } >
-        <Login />
+      <View  >
+        <Title name="PICK DATE AND TIME OPTION" />
+        <Card />
+        <Title name="PICK DATE AND TIME OPTION" />
+        <CardBottom />
+        <TouchableHighlight
+          style={styles.submit}
+          underlayColor='#000'>
+          <Text style={styles.text}>Submit</Text>
+        </TouchableHighlight>
       </View>
     );
   }
 }
 var styles = StyleSheet.create({
-      isyana: {
+  text: {
+    textAlign: 'center',
+    fontSize: 12
+  },    
+  isyana: {
         flex: 1,
       },
-
-
+  submit: {
+    marginRight: 65,
+    marginLeft: 65,
+    marginTop: 10,
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: '#68a0cf',
+    borderRadius: 50,
+    borderWidth: 1,
+    borderColor: '#fff'
+  },
+  submitText: {
+    color: '#fff',
+    textAlign: 'center',
+  }
     });
 AppRegistry.registerComponent('App', () => App);
