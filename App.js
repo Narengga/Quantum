@@ -53,9 +53,8 @@ export default class App extends Component<{}> {
 var styles = StyleSheet.create({
   text: {
     textAlign: 'center',
-    fontSize: 12
-  },
-  container: {
+    fontSize: 12,
+    color: '#fff'
   },    
   isyana: {
         flex: 1,
@@ -66,7 +65,7 @@ var styles = StyleSheet.create({
     marginTop: 10,
     paddingTop: 20,
     paddingBottom: 20,
-    backgroundColor: '#68a0cf',
+    backgroundColor: '#2dc42d',
     borderRadius: 50,
     borderWidth: 1,
     borderColor: '#fff'

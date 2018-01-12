@@ -7,16 +7,15 @@ export default class CardBottom extends Component {
             <View>  
             <View style={styles.view1}>
                 <View style={styles.thumbnailcontainer}>
-                    <Image style={styles.thumbnail} />
+                        <Image style={styles.thumbnail} source={require('./img/3.png')} />
                  </View>
-                <Text style={styles.text}>{this.props.name}</Text>
+                <Text style={styles.text}>Jl. Raya Sesetan 20, Denpasar - Bali</Text>
                 
             </View>
             <View style={styles.view2}>
                 <View style={styles.thumbnailcontainer}>
-                    <Image style={styles.thumbnail}  />
                 </View>
-                <Text style={styles.text}>{this.props.name}</Text>
+                <Text style={styles.text2}>CHOOSE ANOTHER LOCATION</Text>
 
             </View>
             </View>
@@ -48,12 +47,17 @@ const styles = StyleSheet.create({
         borderBottomWidth: 0.5,
     },
     text: {
-        marginLeft: 10,
-        fontSize: 12
+        marginLeft: 90,
+        fontSize: 12,
+        position: 'absolute',
+    },
+    text2: {
+        marginLeft: 30,
+        fontSize: 12,
     },
     thumbnail: {
-        height: 50,
-        width: 50
+        height: 30,
+        width: 30
     },
     thumbnailcontainer: {
         justifyContent: 'center',

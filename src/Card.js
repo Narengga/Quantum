@@ -7,16 +7,16 @@ export default class Card extends Component {
             <View>  
             <View style={styles.view1}>
                 <View style={styles.thumbnailcontainer}>
-                    <Image style={styles.thumbnail} source={require('./img/background.jpg')} />
+                    <Image style={styles.thumbnail} source={require('./img/2.png')} />
                  </View>
-                <Text style={styles.text}>{this.props.name}</Text>
+                    <Text style={styles.text}>31 Jan 2018 & 08:15 AM</Text>
                 
             </View>
             <View style={styles.view2}>
                 <View style={styles.thumbnailcontainer}>
-                    <Image style={styles.thumbnail} source={require('./img/background.jpg')} />
+                    <Image style={styles.thumbnail} source={require('./img/2.png')} />
                 </View>
-                <Text style={styles.text}>{this.props.name}</Text>
+                    <Text style={styles.text}>2nd Option Time</Text>
 
             </View>
             </View>
@@ -61,12 +61,13 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     text: {
-        marginLeft: 10,
-        fontSize: 12
+        marginLeft: 90,
+        fontSize: 12,
+        position:'absolute',
     },
     thumbnail: {
-        height: 50,
-        width: 50
+        height: 30,
+        width: 30
     },
     thumbnailcontainer: {
         justifyContent: 'center',
