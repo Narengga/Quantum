@@ -17,6 +17,9 @@ import Title from "./src/Title";
 import Card from './src/Card';
 import CardBottom from './src/CardBottom';
 
+import DatePage from './src/DatePage';
+import { StackNavigator } from 'react-navigation';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -26,18 +29,24 @@ const instructions = Platform.select({
 
 export default class App extends Component<{}> {
   render() {
+    const { navigation } = this.props;
     return (
-      <View  >
-        <Title name="PICK DATE AND TIME OPTION" />
-        <Card />
-        <Title name="PICK DATE AND TIME OPTION" />
-        <CardBottom />
-        <TouchableHighlight
-          style={styles.submit}
-          underlayColor='#000'>
-          <Text style={styles.text}>Submit</Text>
-        </TouchableHighlight>
+      <View style={styles.container}>
+      <DatePage/>
       </View>
+      // <View  >
+      //   <Title name="PICK DATE AND TIME OPTION" />
+      //   <Card />
+      //   <Title name="PICK DATE AND TIME OPTION" />
+      //   <CardBottom />
+      //   <TouchableHighlight
+      //     style={styles.submit}
+      //     underlayColor='#000'
+      //     onPress={() => navigation('Date')}
+      //     title="Go to Second Screen">
+      //     <Text style={styles.text}>Submit</Text>
+      //   </TouchableHighlight>
+      // </View>
     );
   }
 }
@@ -45,6 +54,8 @@ var styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     fontSize: 12
+  },
+  container: {
   },    
   isyana: {
         flex: 1,
