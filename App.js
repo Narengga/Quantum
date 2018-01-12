@@ -16,7 +16,7 @@ import {
 import Title from "./src/Title";
 import Card from './src/Card';
 import CardBottom from './src/CardBottom';
-
+import ChoosePage from './src/ChoosePage';
 import DatePage from './src/DatePage';
 import { StackNavigator } from 'react-navigation';
 
@@ -31,8 +31,8 @@ export default class App extends Component<{}> {
   render() {
     const { navigation } = this.props;
     return (
-      <View style={styles.container}>
-      <DatePage/>
+      <View >
+        <ChoosePage/>
       </View>
       // <View  >
       //   <Title name="PICK DATE AND TIME OPTION" />
